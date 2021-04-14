@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  PlayerDemoViewController.swift
 //  YoutubeDemo
 //
 //  Created by Steven on 2021/3/31.
@@ -11,26 +11,39 @@ import XCDYouTubeKit
 import YouTubePlayer
 import youtube_ios_player_helper
 
-class MainViewController: UIViewController {
+class PlayerDemoViewController: UIViewController {
 
     @IBOutlet weak var videoContainerView: UIView!
+    
+    var videoSize: CGSize {
+        return self.videoContainerView.frame.size
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .lightGray
+        self.view.backgroundColor = .white
         
         self.playVideoViaPlayerHelper()
+    }
+    
+    @IBAction func getClipboardContent(_ sender: Any) {
+        if let pasteboardString = UIPasteboard.general.string {
+            print("String is \(pasteboardString)")
+        } else {
+            print("Nothing in pasteboard")
+        }
     }
 }
 
 // MARK: - youtube_ios_player_helper
 // https://github.com/youtube/youtube-ios-player-helper
-extension MainViewController: YTPlayerViewDelegate {
+extension PlayerDemoViewController: YTPlayerViewDelegate {
     
     func playVideoViaPlayerHelper() {
 
-        let playerView = YTPlayerView(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
+        let frame = CGRect(x: 0, y: 0, width: self.videoSize.width, height: self.videoSize.height)
+        let playerView = YTPlayerView(frame: frame)
         playerView.delegate = self
 
         // https://developers.google.com/youtube/player_parameters?playerVersion=HTML5#Parameters
@@ -43,12 +56,12 @@ extension MainViewController: YTPlayerViewDelegate {
 
 // MARK: - YouTubePlayer
 // https://github.com/gilesvangruisen/Swift-YouTube-Player
-extension MainViewController {
+extension PlayerDemoViewController {
     
     func playVideoViaYouTubePlayer() {
 
-        let playerFrame = CGRect(x: 0, y: 0, width: 300, height: 200)
-        let videoPlayer = YouTubePlayerView(frame: playerFrame)
+        let frame = CGRect(x: 0, y: 0, width: self.videoSize.width, height: self.videoSize.height)
+        let videoPlayer = YouTubePlayerView(frame: frame)
         
         // https://developers.google.com/youtube/player_parameters?playerVersion=HTML5#Parameters
         videoPlayer.playerVars["modestbranding"] = 1 as AnyObject?
@@ -62,7 +75,7 @@ extension MainViewController {
 
 // MARK: - XCDYouTubeKit
 // https://github.com/0xced/XCDYouTubeKit
-extension MainViewController {
+extension PlayerDemoViewController {
 
     func playVideoViaXCDYouTubeKit() {
 

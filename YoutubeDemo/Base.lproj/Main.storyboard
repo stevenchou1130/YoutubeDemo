@@ -17,30 +17,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="im4-cN-5UK">
-                                <rect key="frame" x="44" y="348" width="326" height="200"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pU-ok-btk">
+                                <rect key="frame" x="0.0" y="124" width="414" height="233"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="hK4-Ye-JVZ"/>
+                                    <constraint firstAttribute="width" secondItem="1pU-ok-btk" secondAttribute="height" multiplier="16:9" id="IOh-wK-rD7"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="im4-cN-5UK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="B1N-nX-2jN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="im4-cN-5UK" secondAttribute="trailing" constant="44" id="DO3-Mu-PaR"/>
-                            <constraint firstItem="im4-cN-5UK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O61-5y-YQv"/>
-                            <constraint firstItem="im4-cN-5UK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="hIs-9S-XpJ"/>
+                            <constraint firstItem="1pU-ok-btk" firstAttribute="width" secondItem="1pU-ok-btk" secondAttribute="height" multiplier="16:9" id="7Qn-cL-ope"/>
+                            <constraint firstItem="1pU-ok-btk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8h3-E1-6ew"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1pU-ok-btk" secondAttribute="trailing" id="99w-Sz-6My"/>
+                            <constraint firstItem="1pU-ok-btk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="n79-zD-lO1"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="videoContainerView" destination="im4-cN-5UK" id="1A7-kK-m3E"/>
+                        <outlet property="videoContainerView" destination="1pU-ok-btk" id="ruE-3f-cb4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-196" y="127"/>
+        </scene>
+        <!--Player Demo View Controller-->
+        <scene sceneID="xNM-2Z-an0">
+            <objects>
+                <viewController id="RsU-0C-lu3" customClass="PlayerDemoViewController" customModule="YoutubeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UMf-mv-dpE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hP-ox-7hO">
+                                <rect key="frame" x="44" y="356.5" width="326" height="183"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5hP-ox-7hO" secondAttribute="height" multiplier="16:9" id="xgg-2s-wqO"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0J-PV-Tnd">
+                                <rect key="frame" x="168.5" y="682" width="77" height="30"/>
+                                <state key="normal" title="複製剪貼簿"/>
+                                <connections>
+                                    <action selector="getClipboardContent:" destination="RsU-0C-lu3" eventType="touchUpInside" id="im0-H0-3cc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cyE-bX-XEe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5hP-ox-7hO" firstAttribute="centerY" secondItem="UMf-mv-dpE" secondAttribute="centerY" id="GlS-uY-dep"/>
+                            <constraint firstItem="cyE-bX-XEe" firstAttribute="trailing" secondItem="5hP-ox-7hO" secondAttribute="trailing" constant="44" id="bXK-io-hTn"/>
+                            <constraint firstItem="5hP-ox-7hO" firstAttribute="leading" secondItem="cyE-bX-XEe" secondAttribute="leading" constant="44" id="kSC-gO-Bav"/>
+                            <constraint firstItem="5hP-ox-7hO" firstAttribute="centerX" secondItem="UMf-mv-dpE" secondAttribute="centerX" id="pnK-3l-ydF"/>
+                            <constraint firstItem="S0J-PV-Tnd" firstAttribute="centerX" secondItem="UMf-mv-dpE" secondAttribute="centerX" id="ruy-qd-vkd"/>
+                            <constraint firstItem="cyE-bX-XEe" firstAttribute="bottom" secondItem="S0J-PV-Tnd" secondAttribute="bottom" constant="150" id="y84-2u-gFC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoContainerView" destination="5hP-ox-7hO" id="qxk-HJ-9Lc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qg9-Dp-1cp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="127"/>
         </scene>
     </scenes>
     <resources>
