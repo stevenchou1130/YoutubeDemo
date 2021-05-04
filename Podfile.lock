@@ -1,24 +1,28 @@
 PODS:
+  - SnapKit (5.0.1)
   - XCDYouTubeKit (2.15.2)
   - youtube-ios-player-helper (1.0.3)
   - YouTubePlayer (0.7.2)
 
 DEPENDENCIES:
+  - SnapKit
   - XCDYouTubeKit (~> 2.15)
   - youtube-ios-player-helper
   - YouTubePlayer
 
 SPEC REPOS:
   trunk:
+    - SnapKit
     - XCDYouTubeKit
     - youtube-ios-player-helper
     - YouTubePlayer
 
 SPEC CHECKSUMS:
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   XCDYouTubeKit: b120aced3d8638ffb570c5450cddb5a1dac448c7
   youtube-ios-player-helper: 0185c57db23c80d63d6ca11251d110abb8a4ca61
   YouTubePlayer: 2b5f2830d8f9b2cde942083211291e382c9e6bd5
 
-PODFILE CHECKSUM: b01c3b7d2dac32111c644dcb8fe7770922df0d07
+PODFILE CHECKSUM: acfd90f23d19ce28ee25dcd45b2e0cc0df2d8229
 
 COCOAPODS: 1.10.1

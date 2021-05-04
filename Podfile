@@ -6,6 +6,7 @@ target 'YoutubeDemo' do
   use_frameworks!
 
   # Pods for YoutubeDemo
+  pod 'SnapKit'
   pod "XCDYouTubeKit", "~> 2.15"
   pod 'YouTubePlayer'
   pod "youtube-ios-player-helper"
