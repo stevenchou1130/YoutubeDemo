@@ -10,5 +10,6 @@ target 'YoutubeDemo' do
   pod "XCDYouTubeKit", "~> 2.15"
   pod 'YouTubePlayer'
   pod "youtube-ios-player-helper"
+  pod 'BMPlayer'
   
 end

@@ -68,17 +68,23 @@ extension SCAVPlayerViewController {
     
     func handelSeekAction() {
         
-        self.seekTask?.cancel()
-        
-        let task = DispatchWorkItem { [weak self] in
-            if let secs = self?.player?.currentTime().seconds {
-                self?.seekAt = Float(secs)
-                print("=== SeekAt: \(secs)")
-            }
+        guard let secs = self.player?.currentTime().seconds else {
+            return
         }
         
-        self.seekTask = task
+        let seconds = Float(secs)
+        self.seekAt = seconds
+        self.sendSeekSignal(with: seconds)
+    }
+    
+    func sendSeekSignal(with seconds: Float) {
         
+        self.seekTask?.cancel()
+        let task = DispatchWorkItem { [weak self] in
+            // Call API
+            print("=== Seek at: \(seconds)")
+        }
+        self.seekTask = task
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.75, execute: task)
     }
     
@@ -103,6 +109,9 @@ extension SCAVPlayerViewController {
             }
             
             if (player.rate > 0) {
+                
+                self.seekTask?.cancel()
+                
                 // Play
                 print("=== Play on: \(player.currentTime().seconds)")
                 print("=== isForward: \(self.isForward)")
