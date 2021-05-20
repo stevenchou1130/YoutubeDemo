@@ -13,9 +13,10 @@
 		B0270B2426146B57008452B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0270B2226146B57008452B2 /* Main.storyboard */; };
 		B0270B2626146B5A008452B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0270B2526146B5A008452B2 /* Assets.xcassets */; };
 		B0270B2926146B5A008452B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0270B2726146B5A008452B2 /* LaunchScreen.storyboard */; };
+		B03E4E142656311A009B348D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E4E132656311A009B348D /* MainViewController.swift */; };
 		B063D08226259A47002BEAC5 /* YTPlayerHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B063D08126259A47002BEAC5 /* YTPlayerHelperViewController.swift */; };
-		B08F36482648DBA30041C7E8 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08F36472648DBA20041C7E8 /* PlayVideoViewController.swift */; };
-		B0B9063C2640DB050045CCA4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B9063B2640DB050045CCA4 /* MainViewController.swift */; };
+		B08F36482648DBA30041C7E8 /* BMPlayerDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08F36472648DBA20041C7E8 /* BMPlayerDemoViewController.swift */; };
+		B0B9063C2640DB050045CCA4 /* SCPlayerDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B9063B2640DB050045CCA4 /* SCPlayerDemoViewController.swift */; };
 		B0B9063F2640F86C0045CCA4 /* SCAVPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B9063E2640F86C0045CCA4 /* SCAVPlayerViewController.swift */; };
 		B0ED8FD8261C5A26006E7EAE /* YoutubeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED8FD7261C5A26006E7EAE /* YoutubeManager.swift */; };
 		E470E7E28BB64C89B0C8AFD4 /* Pods_YoutubeDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3BB82A8BCD7A986A547667 /* Pods_YoutubeDemo.framework */; };
@@ -33,9 +34,10 @@
 		B0270B2526146B5A008452B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0270B2826146B5A008452B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0270B2A26146B5A008452B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B03E4E132656311A009B348D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B063D08126259A47002BEAC5 /* YTPlayerHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTPlayerHelperViewController.swift; sourceTree = "<group>"; };
-		B08F36472648DBA20041C7E8 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
-		B0B9063B2640DB050045CCA4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B08F36472648DBA20041C7E8 /* BMPlayerDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMPlayerDemoViewController.swift; sourceTree = "<group>"; };
+		B0B9063B2640DB050045CCA4 /* SCPlayerDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCPlayerDemoViewController.swift; sourceTree = "<group>"; };
 		B0B9063E2640F86C0045CCA4 /* SCAVPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCAVPlayerViewController.swift; sourceTree = "<group>"; };
 		B0ED8FD7261C5A26006E7EAE /* YoutubeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,8 +95,8 @@
 				B0270B1C26146B57008452B2 /* AppDelegate.swift */,
 				B0270B1E26146B57008452B2 /* SceneDelegate.swift */,
 				B063D08626259F4F002BEAC5 /* Main */,
-				B08F36462648DB6F0041C7E8 /* CustomAVPlayer */,
-				B063D08526259F44002BEAC5 /* Test */,
+				B08F36462648DB6F0041C7E8 /* XCDAndBMPlayer */,
+				B063D08526259F44002BEAC5 /* TestDiffPlayerLib */,
 				B0B9063D2640F8490045CCA4 /* SCAVPlayerVC */,
 				B0270B2226146B57008452B2 /* Main.storyboard */,
 				B0270B2526146B5A008452B2 /* Assets.xcassets */,
@@ -104,35 +106,36 @@
 			path = YoutubeDemo;
 			sourceTree = "<group>";
 		};
-		B063D08526259F44002BEAC5 /* Test */ = {
+		B063D08526259F44002BEAC5 /* TestDiffPlayerLib */ = {
 			isa = PBXGroup;
 			children = (
 				B063D08126259A47002BEAC5 /* YTPlayerHelperViewController.swift */,
 				B0270B2026146B57008452B2 /* PlayerDemoViewController.swift */,
 			);
-			path = Test;
+			path = TestDiffPlayerLib;
 			sourceTree = "<group>";
 		};
 		B063D08626259F4F002BEAC5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				B0B9063B2640DB050045CCA4 /* MainViewController.swift */,
+				B03E4E132656311A009B348D /* MainViewController.swift */,
 				B0ED8FD7261C5A26006E7EAE /* YoutubeManager.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		B08F36462648DB6F0041C7E8 /* CustomAVPlayer */ = {
+		B08F36462648DB6F0041C7E8 /* XCDAndBMPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				B08F36472648DBA20041C7E8 /* PlayVideoViewController.swift */,
+				B08F36472648DBA20041C7E8 /* BMPlayerDemoViewController.swift */,
 			);
-			path = CustomAVPlayer;
+			path = XCDAndBMPlayer;
 			sourceTree = "<group>";
 		};
 		B0B9063D2640F8490045CCA4 /* SCAVPlayerVC */ = {
 			isa = PBXGroup;
 			children = (
+				B0B9063B2640DB050045CCA4 /* SCPlayerDemoViewController.swift */,
 				B0B9063E2640F86C0045CCA4 /* SCAVPlayerViewController.swift */,
 			);
 			path = SCAVPlayerVC;
@@ -255,9 +258,10 @@
 				B0270B2126146B57008452B2 /* PlayerDemoViewController.swift in Sources */,
 				B0270B1D26146B57008452B2 /* AppDelegate.swift in Sources */,
 				B0270B1F26146B57008452B2 /* SceneDelegate.swift in Sources */,
-				B0B9063C2640DB050045CCA4 /* MainViewController.swift in Sources */,
-				B08F36482648DBA30041C7E8 /* PlayVideoViewController.swift in Sources */,
+				B0B9063C2640DB050045CCA4 /* SCPlayerDemoViewController.swift in Sources */,
+				B08F36482648DBA30041C7E8 /* BMPlayerDemoViewController.swift in Sources */,
 				B0ED8FD8261C5A26006E7EAE /* YoutubeManager.swift in Sources */,
+				B03E4E142656311A009B348D /* MainViewController.swift in Sources */,
 				B0B9063F2640F86C0045CCA4 /* SCAVPlayerViewController.swift in Sources */,
 				B063D08226259A47002BEAC5 /* YTPlayerHelperViewController.swift in Sources */,
 			);

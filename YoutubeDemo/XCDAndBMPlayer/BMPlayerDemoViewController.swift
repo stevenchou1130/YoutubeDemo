@@ -1,5 +1,5 @@
 //
-//  PlayVideoViewController.swift
+//  BMPlayerDemoViewController.swift
 //  YoutubeDemo
 //
 //  Created by Steven on 2021/5/10.
@@ -9,7 +9,7 @@ import UIKit
 import XCDYouTubeKit
 import BMPlayer
 
-class PlayVideoViewController: UIViewController {
+class BMPlayerDemoViewController: UIViewController {
     
     var currentState: BMPlayerState?
     
@@ -47,9 +47,7 @@ class PlayVideoViewController: UIViewController {
         
         self.configVideo(with: "hWWw-06ebkY")
     }
-    
-    
-    
+
     override var shouldAutorotate: Bool {
         return true
     }
@@ -79,7 +77,7 @@ class PlayVideoViewController: UIViewController {
     }
 }
 
-extension PlayVideoViewController: BMPlayerDelegate {
+extension BMPlayerDemoViewController: BMPlayerDelegate {
     
     func bmPlayer(player: BMPlayer, playerIsPlaying playing: Bool) {
         print("=== playerIsPlaying: \(playing)")
